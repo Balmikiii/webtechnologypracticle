@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>Input operation</title>
+    <link href="../3rd/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../3rd/js/bootstrap.bundle.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style>
+    .regit{
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+        margin-top: 100px;
+        box-shadow: 2px 2px 19px black;
+    }
+</style>
+</head>
+<body>
+    <div class="regit pt-3 pb-3 pe-3 ps-3">
+        <div class="text-center h4">quadratic equations</div>
+            <input type="number" id="a" class="form-control mb-3" placeholder="quadratic equations number">
+            <input type="number" id="b" class="form-control mb-3" placeholder="quadratic equations number">
+            <input type="number" id="c" class="form-control mb-3" placeholder="quadratic equations number">
+            <p id="x"></p>
+            <p id="y"></p>
+        <div class="text-center pt-3">
+            <button onclick="Balmiki()" class="btn btn-dark">Root</button>
+        </div>
+    </div>
+    <script>
+        function Balmiki() {
+        let a = parseInt( document.getElementById("a").value);
+        let b = parseInt( document.getElementById("b").value);
+        let c = parseInt( document.getElementById("c").value);
+        let discriminant = b*b - 4*a*c;
+        let x = (-b+ Math.sqrt(discriminant))/2;
+        let y = (-b- Math.sqrt(discriminant))/2;
+        document.getElementById("x").innerHTML = "Your first root is"+x ;
+        document.getElementById("y").innerHTML = "your second root is"+y ;
+        }
+    </script>
+</body>
+</html>

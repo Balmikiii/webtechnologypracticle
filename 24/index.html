@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title>factorial number</title>
+    <link href="../3rd/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../3rd/js/bootstrap.bundle.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<style>
+    .regit{
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 5px;
+        margin-top: 100px;
+        box-shadow: 2px 2px 19px black;
+    }
+</style>
+</head>
+<body>
+    <div class="regit pt-3 pb-3 pe-3 ps-3">
+        <div class="text-center h4">factorial number</div>
+            <input type="number" id="n" class="form-control mb-3" placeholder="Enter factorial number">
+            <p id="b"></p>
+            <div class="text-center pt-3">
+                <button onclick="fact1()" class="btn btn-dark">Check</button>
+            </div>
+    </div>
+    <script>
+        function fact(num){  
+            if (num == 0) {  
+            return 1;  
+            }else {  
+            return num * fact( num - 1 );  
+            }}  
+            function fact1(){  
+            var num = document.getElementById("n").value;  
+            var f = fact(num);  
+            document.getElementById("b").innerHTML="The factorial of the number " + num + " is: " + f ;  
+            }  
+    </script>
+</body>
+</html>
